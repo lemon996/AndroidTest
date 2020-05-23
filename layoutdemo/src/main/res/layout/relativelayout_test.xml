@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        参照父容器
+        layout_centerInParent       屏幕居中
+        layout_alignParentLeft      居左(默认)
+        layout_alignParentRight     居右
+        layout_alignParentTop       居上
+        layout_alignParentBottom    居下
+        layout_centerHorizontal     水平居中
+        layout_centerVertical       垂直居中
+        可以组合使用
+        -->
+
+    <!--@+id: 对一个控件添加id    -->
+    <TextView
+        android:id="@+id/center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textSize="30sp"
+        android:text="屏幕正中"
+        android:background="#ff0000"
+        android:layout_centerInParent="true"
+        ></TextView>
+
+    <!--
+        1.在参照物的某边
+        layout_toLeftOf     相对于***的左边
+        layout_toRightOf    相对于***的右边
+        layout_above        相对于***的上边
+        layout_below        相对于***的下边
+
+        2.在参照物的某边线对齐
+        layout_alignTop
+        layout_alignBottom
+        layout_alignLeft
+        layout_alignRight
+        -->
+    <!--@id 使用该控件-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textSize="30sp"
+        android:text="中偏左上"
+        android:background="#00ff00"
+        android:layout_toLeftOf="@+id/center"
+        android:layout_above="@+id/center"
+        ></TextView>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textSize="30sp"
+        android:text="中偏右上"
+        android:background="#00ff00"
+        android:layout_toRightOf="@+id/center"
+        android:layout_above="@+id/center"
+        ></TextView>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textSize="30sp"
+        android:text="中偏左下"
+        android:background="#00ff00"
+        android:layout_toLeftOf="@+id/center"
+        android:layout_below="@+id/center"
+        ></TextView>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textSize="30sp"
+        android:text="中偏右下"
+        android:background="#00ff00"
+        android:layout_toRightOf="@+id/center"
+        android:layout_below="@+id/center"
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="和中间上边线对齐"
+        android:background="#0000ff"
+        android:layout_alignTop="@+id/center"
+        ></TextView>
+
+</RelativeLayout>

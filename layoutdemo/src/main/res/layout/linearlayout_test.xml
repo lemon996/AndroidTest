@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+<!--    android:layout_margin="20dp"-->
+<!--    android:padding="20dp"-->
+    <!--vertical: 垂直    horizontal: 水平-->
+    <!--layoyt_weight: 权重(内部控件使用 TextView)
+        作用主要是控件会占据剩余的空间(其他没设置layoyt_weight)
+                        /按比例分配(设置了layoyt_weight)
+        设置layoyt_weight要把对于的宽或高设置为0dp，不设置的话
+        文本控件的内容会挤到其他控件里去
+    -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="123123123"
+        android:background="#FF0000"
+        android:textSize="28sp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="456"
+        android:background="#00ff00"
+        android:textSize="28sp"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="789"
+        android:background="#0000ff"
+        android:textSize="28sp"
+        android:layout_weight="2"
+        />
+</LinearLayout>
